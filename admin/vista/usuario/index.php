@@ -3,12 +3,7 @@
 <head>
  <meta charset="UTF-8">
  <title>Gestión de usuarios</title>
- <?php
- session_start();
- if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] === FALSE){
- header("Location: /SistemaDeGestion/public/vista/login.html");
- }
-?>
+
 </head>
 <body>
 <a href="../../../config/cerrar_sesion.php">Cerrar Sesion</a>

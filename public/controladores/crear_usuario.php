@@ -21,9 +21,10 @@
  $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
  $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]): null;
  $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
+ //$rol = isset($_POST["rol"]) ? trim($_POST["rol"]) : null;
 
  $sql = "INSERT INTO usuario VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', '$telefono',
-'$correo', MD5('$contrasena'), '$fechaNacimiento', 'N', null, null)";
+'$correo', MD5('$contrasena'),'Usuario' ,'$fechaNacimiento', 'N', null, null)";
  if ($conn->query($sql) === TRUE) {
  echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
  } else {
